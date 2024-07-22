@@ -1,0 +1,31 @@
+Algorithm: All steps are sequential
+===================================
+
+Setup output:
+- All gpios (7seg, Washing Machine(WM) gpios)
+
+Setup input interrupt button callbacks:
+- Coin accepter pulse input
+- Single press for stats on 7 seg(coin count and coin value)
+- Long press for reset (Eeprom values(coin count, coin values & timeout) reset to 0)
+
+Washing Machine(WM) check Ok?
+{
+if power recovery(EEPROM check), check for WM mode/time resumed with respect to eeprom mode/time data.
+if fresh start, check if WM is responding.
+}
+
+Request and wait for coins(start wait with 20s timer).
+
+Find total value of coins accepted.
+
+Read, increment, write the coin count and total value collected in eeprom.
+
+Select WM mode/time and start the selected wash cycle
+
+Start printing decrementing timeout on 7seg display
+
+Thread/periodic loop:
+- Update 7seg display timeout
+- Update display timeout to eeprom
+
