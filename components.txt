@@ -1,0 +1,11 @@
+Items			Retail cost(Rs)
+
+7segment display	50
+PIC16F18054		100
+Coin accepter		650
+Push button		30
+Cables/harness		100
+PCB connectors		10
+PCB			100
+Adapter			150
+Box			500
