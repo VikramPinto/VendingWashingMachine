@@ -5,9 +5,10 @@ Setup output:
 - All gpios (7seg, Washing Machine(WM) gpios)
 
 Setup input interrupt button callbacks:
-- Coin accepter pulse input
-- Single press for stats on 7 seg(coin count and coin value)
-- Long press for reset (Eeprom values(coin count, coin values & timeout) reset to 0)
+- input 1: Coin accepter pulse input.
+- input 2: Single press for stats on 7 seg(coin count and coin value).
+- input 2: Long press for reseti, Eeprom values(coin count, coin values & timeout) reset to 0.
+- input 3: Wash cycle completion interrupt.
 
 Washing Machine(WM) check Ok?
 {
